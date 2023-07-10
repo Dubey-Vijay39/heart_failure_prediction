@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Heart Failure Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">HEART FAILURE PREDICTION</h1>
+      <div class="row-center">
+        <h5 class="header col s12 light">Predict the probability of Heart Failure Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+                <form action="{{ url_for('predict')}}"method="post">
+
+                    <label for="Age">Age:</label><br>
+                    <input type="text" name="age" placeholder="Age" required="required" /><br>
+
+                    <label for="Sex">Sex:</label><br>
+                    <input type="text" name="sex" placeholder="M or F" required="required" /><br>
+
+                    <label for="chestpain-type">ChestPain Type:</label><br>
+                    <input type="text" name="chestpain_type" placeholder="ATA or NAP or ASY or TA" required="required" /><br>
+
+                    <label for="Resting-BP">Resting-BP:</label><br>
+                    <input type="text" name="resting_bp" placeholder="eg. 140" required="required" /><br>
+
+                    <label for="Cholestrol">Cholestrol:</label><br>
+                    <input type="text" name="cholestrol" placeholder="eg. 289" required="required" /><br>
+
+                    <label for="FastingBS">Fasting BS:</label><br>
+                    <input type="text" name="fasting_bs" placeholder="0 or 1" required="required" /><br>
+
+                    <label for="Resting-ECG">Resting ECG:</label><br>
+                    <input type="text" name="resting_ecg" placeholder="Normal or ST or LVH" required="required" /><br>
+
+                    <label for="Max-HR">Max HR:</label><br>
+                    <input type="text" name="max_hr" placeholder="eg. 172" required="required" /><br>
+
+ 
+                    <label for="Excercise-Angina">Excercise Angina:</label><br>
+                    <input type="text" name="excercise_angina" placeholder="Y for Yes or N for No" required="required" /><br>
+
+                    <label for="OldPeak">OldPeak:</label><br>
+                    <input type="text" name="oldpeak" placeholder="eg. 0.0" required="required" /><br>
+
+
+                    <label for="ST_Slope">ST_Slope</label><br>
+                    <input type="text" name="st_slope" placeholder="Up or Down or Flat" required="required" /><br><br>
+
+                    
+                    <button type="submit" class="btn">Predict</button>
+                </form>
+      </div>
+      
+        <br>
+
+    </div>
+  </div>
+
+    <br><br>
+  </div>
+  </div>>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </body>
+</html>
